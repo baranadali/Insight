@@ -1,0 +1,1035 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: mont-light;
+  src: url(/assets/fonts/Mont-Light.otf);
+}
+@font-face {
+  font-family: mont-regular;
+  src: url(/assets/fonts/Mont-Regular.otf);
+}
+@font-face {
+  font-family: mont-semibold;
+  src: url(/assets/fonts/Mont-SemiBold.otf);
+}
+@font-face {
+  font-family: mont-bold;
+  src: url(/assets/fonts/Mont-Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: mont-regular;
+}
+
+ion-icon {
+  cursor: pointer;
+}
+
+:root {
+  --light: rgb(244, 234, 234);
+  --dark: rgb(17, 16, 16);
+  --heroBackground: #0d0e12;
+  --heroBackgroundSticky: #0d0e12e8;
+  --lightGray: #7d7f82;
+  --lightestGray: #22262f;
+  --purple: #724FF8;
+  --purpleGradient: linear-gradient(267deg, rgba(114,79,248,1) 0%, rgba(91,6,212,1) 100%);
+  --pricingBackground: #F9F9FB;
+  --footerBackground: #1C1F21;
+  --rainbow: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lightestGray);
+}
+
+.sticky-header {
+  -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;
+  background-color: var(--heroBackgroundSticky) !important;
+}
+
+.header-section {
+  position: fixed;
+  top: 0;
+  padding-left: 13%;
+  padding-right: 13%;
+  background-color: var(--heroBackground);
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+.header-section .header-logo a img {
+  width: 70%;
+}
+.header-section .header-menu .navbar {
+  display: flex;
+  align-items: center;
+}
+.header-section .header-menu .navbar ion-icon {
+  display: none;
+}
+.header-section .header-menu .navbar li a {
+  padding: 8px 16px;
+  border-radius: 16px;
+  color: var(--lightGray);
+  transition: all 0.6s;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.header-section .header-menu .navbar li a:hover {
+  color: var(--light);
+  background-color: var(--lightestGray);
+}
+.header-section .header-menu .navbar li a.active {
+  color: var(--light);
+  background-color: var(--lightestGray);
+}
+.header-section .header-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-section .header-btn a.login {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--lightGray);
+  transition: all 0.6s;
+}
+.header-section .header-btn a.login:hover {
+  color: var(--light);
+}
+.header-section .header-btn a.start-now {
+  font-size: 13px;
+  background-color: var(--lightestGray);
+  padding: 8px 12px 8px 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--light);
+  transition: all 0.6s;
+}
+.header-section .header-btn a.start-now:hover {
+  transform: scaleX(1.03);
+}
+.header-section .header-btn a.start-now ion-icon {
+  opacity: 0.6;
+  padding-top: 1px;
+}
+.header-section .header-responsive {
+  display: none;
+}
+.header-section .header-responsive ion-icon {
+  color: var(--light);
+  font-size: 36px;
+}
+
+.hero-section {
+  padding-top: 28px;
+  width: 100%;
+  background-color: var(--heroBackground);
+}
+.hero-section .hero-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.hero-section .hero-title {
+  padding-top: 160px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-section .hero-title .text-base-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-content: center;
+  color: var(--light);
+  transition: all 0.6s;
+}
+.hero-section .hero-title .text-base-container:hover {
+  margin-left: 10px;
+}
+.hero-section .hero-title .text-base-container ion-icon {
+  opacity: 0.7;
+}
+.hero-section .hero-title .text-base-container h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.hero-section .hero-title .text-base-container h4.exp {
+  opacity: 0.7;
+}
+.hero-section .hero-title .text-base-container h4.text-base {
+  display: flex;
+  align-items: center;
+}
+.hero-section .hero-title .hero-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+.hero-section .hero-title .hero-btn a {
+  background-color: var(--light);
+  color: var(--heroBackground);
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.6s;
+}
+.hero-section .hero-title .hero-btn a:hover {
+  transform: scaleX(1.03);
+}
+.hero-section .hero-title h1.title {
+  padding-top: 28px;
+  color: var(--light);
+  font-size: 56px;
+  text-align: center;
+  font-weight: 200;
+  line-height: 118%;
+  font-family: mont-light;
+}
+.hero-section .hero-title h1.title span {
+  color: var(--lightGray);
+}
+.hero-section .hero-title p.desc {
+  color: var(--lightGray);
+  padding-top: 18px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 300;
+}
+.hero-section .hero-dashboard {
+  display: flex;
+  justify-content: center;
+  padding-top: 112px;
+}
+.hero-section .hero-dashboard img {
+  border-radius: 24px 24px 0px 0px;
+}
+
+.branding-section .branding-base {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+.branding-section .branding-base .branding-wrapper {
+  padding: 60px 0;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(5, auto);
+}
+.branding-section .branding-base .branding-wrapper img {
+  filter: grayscale(1);
+  opacity: 0.4;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+.branding-section .branding-base .branding-wrapper img:hover {
+  opacity: 1;
+}
+
+.provide-section {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+.provide-section .provide-content {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 82px;
+  padding-top: 28px;
+}
+.provide-section .provide-content .provide-title h3 {
+  font-size: 36px;
+  font-family: mont-semibold;
+}
+.provide-section .provide-content .provide-desc {
+  display: flex;
+  justify-content: center;
+}
+.provide-section .provide-content .provide-desc p {
+  color: var(--lightGray);
+  font-family: mont-regular;
+}
+.provide-section .provide-content .provide-btn {
+  display: flex;
+  justify-content: end;
+}
+.provide-section .provide-content .provide-btn a {
+  font-size: 14px;
+  background-color: var(--heroBackground);
+  padding: 16px 32px;
+  border-radius: 32px;
+  gap: 4px;
+  color: var(--light);
+  transition: all 0.6s;
+}
+.provide-section .provide-content .provide-btn a:hover {
+  transform: scaleX(1.03);
+}
+
+.features-section {
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-bottom: 180px;
+}
+.features-section .features-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+.features-section .features-wrap .features {
+  width: 100%;
+}
+.features-section .features-wrap .features img {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.features-section .features-wrap .features p {
+  font-family: mont-regular;
+  color: var(--lightGray);
+  line-height: 130%;
+}
+.features-section .features-wrap .features h4 {
+  font-family: mont-regular;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.list-features-section {
+  padding-left: 13%;
+  padding-right: 13%;
+  margin-bottom: 180px;
+  width: 100%;
+}
+.list-features-section .list-features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8%;
+}
+.list-features-section .list-features .list-features-images img {
+  display: block;
+}
+.list-features-section .list-features .list-features-text h3 {
+  font-family: mont-semibold;
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+.list-features-section .list-features .list-features-text p.desc {
+  color: var(--lightGray);
+  font-family: mont-regular;
+  margin-bottom: 42px;
+}
+.list-features-section .list-features .list-features-text .list-features-list {
+  margin-bottom: 58px;
+}
+.list-features-section .list-features .list-features-text .list-features-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.list-features-section .list-features .list-features-text .list-features-list ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.list-features-section .list-features .list-features-text .list-features-list ul li p {
+  font-family: mont-regular;
+  font-size: 16px;
+  color: var(--lightestGray);
+}
+.list-features-section .list-features .list-features-text .list-features-list ul li ion-icon {
+  color: var(--purple);
+  font-size: 19px;
+}
+.list-features-section .list-features .list-features-text .list-features-btn a.learn-more {
+  font-size: 14px;
+  background-color: var(--heroBackground);
+  padding: 16px 32px;
+  border-radius: 32px;
+  gap: 4px;
+  color: var(--light);
+  transition: all 0.6s;
+}
+.list-features-section .list-features .list-features-text .list-features-btn a.learn-more:hover {
+  transform: scaleX(1.03);
+}
+
+.list-features-secondary-section {
+  padding-left: 13%;
+  padding-right: 13%;
+  margin-bottom: 180px;
+  width: 100%;
+}
+.list-features-secondary-section .list-features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8%;
+}
+.list-features-secondary-section .list-features .list-features-images img {
+  display: block;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary h3 {
+  font-family: mont-semibold;
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary p.desc {
+  color: var(--lightGray);
+  font-family: mont-regular;
+  margin-bottom: 42px;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-list {
+  margin-bottom: 58px;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-list ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-list ul li p {
+  font-family: mont-regular;
+  font-size: 16px;
+  color: var(--lightestGray);
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-list ul li ion-icon {
+  color: var(--purple);
+  font-size: 19px;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-btn a.learn-more {
+  font-size: 14px;
+  background-color: var(--heroBackground);
+  padding: 16px 32px;
+  border-radius: 32px;
+  gap: 4px;
+  color: var(--light);
+  transition: all 0.6s;
+}
+.list-features-secondary-section .list-features .list-features-text-secondary .list-features-btn a.learn-more:hover {
+  transform: scaleX(1.03);
+}
+
+.pricing-section {
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 80px;
+  padding-bottom: 280px;
+  background-color: var(--pricingBackground);
+  width: 100%;
+  position: relative;
+}
+.pricing-section .pricing-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pricing-section .pricing-base .pricing-title {
+  width: 30%;
+}
+.pricing-section .pricing-base .pricing-title h3 {
+  font-family: mont-semibold;
+  font-size: 42px;
+  margin-bottom: 16px;
+  line-height: 115%;
+}
+.pricing-section .pricing-base .pricing-title p {
+  width: 80%;
+  color: var(--lightGray);
+  font-family: mont-regular;
+  margin-bottom: 42px;
+}
+.pricing-section .pricing-base .pricing-title .pricing-title-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.pricing-section .pricing-base .pricing-title .pricing-title-btn a.pricing-monthly {
+  font-size: 14px;
+  padding: 16px 32px;
+  border-radius: 32px;
+  gap: 4px;
+  color: var(--heroBackground);
+  transition: all 0.6s;
+  font-family: mont-regular;
+  font-family: mont-regular;
+  cursor: pointer;
+}
+.pricing-section .pricing-base .pricing-title .pricing-title-btn a.pricing-annual {
+  cursor: pointer;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 16px 32px;
+  border-radius: 32px;
+  gap: 4px;
+  color: var(--heroBackground);
+  transition: all 0.6s;
+  font-family: mont-regular;
+}
+.pricing-section .pricing-base .pricing-title .pricing-title-btn a.pricing-active {
+  background-color: var(--heroBackground);
+  color: var(--light);
+}
+.pricing-section .pricing-base .pricing-table {
+  flex: 1;
+  margin-left: 108px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 48px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan {
+  width: 400px;
+  padding: 60px 40px;
+  background-color: white;
+  border-radius: 6px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan h4.plan-type {
+  font-size: 16px;
+  color: var(--lightGray);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan h3.plan-price {
+  font-size: 32px;
+  color: var(--heroBackground);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan p.plan-desc {
+  font-weight: 400;
+  color: var(--lightGray);
+  margin-bottom: 24px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-features ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-features ul li ion-icon {
+  color: var(--purple);
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-features ul li ion-icon.plan-features-dec {
+  color: var(--lightGray);
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-features ul li a {
+  color: var(--heroBackground);
+  font-size: 16px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-btn {
+  margin-top: 24px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-btn a {
+  display: block;
+  text-align: center;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 16px 0;
+  transition: all 0.6s;
+  border-radius: 32px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .basic-plan .plan-btn a:hover {
+  background-color: var(--purple);
+  color: var(--light);
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan {
+  background-color: var(--lightestGray);
+  width: 400px;
+  padding: 60px 40px;
+  border-radius: 6px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan h4.plan-type {
+  font-size: 16px;
+  color: var(--light);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan h3.plan-price {
+  transition: all 0.6s;
+  font-size: 32px;
+  color: var(--light);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan p.plan-desc {
+  font-weight: 400;
+  color: var(--lightGray);
+  margin-bottom: 24px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-features ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-features ul li ion-icon {
+  color: var(--purple);
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-features ul li a {
+  color: var(--light);
+  font-size: 16px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-btn {
+  margin-top: 24px;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-btn a {
+  display: block;
+  text-align: center;
+  color: var(--light);
+  background-color: var(--purple);
+  padding: 15px 0;
+  border-radius: 32px;
+  border: 1px solid transparent;
+  transition: all 0.6s;
+}
+.pricing-section .pricing-base .pricing-table .pricing-list .pro-plan .plan-btn a:hover {
+  background-color: transparent;
+  border: 1px solid var(--purple);
+}
+.pricing-section .join-now-section {
+  background: var(--purpleGradient);
+  position: absolute;
+  border-radius: 6px;
+  bottom: -165px;
+  left: 50%;
+  width: 60%;
+  transform: translateX(-50%);
+}
+.pricing-section .join-now-section .join-now-base .join-now-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 72px 0;
+}
+.pricing-section .join-now-section .join-now-base .join-now-title h3 {
+  font-size: 42px;
+  font-family: mont-semibold;
+  margin-bottom: 12px;
+  color: white;
+}
+.pricing-section .join-now-section .join-now-base .join-now-title p {
+  color: white;
+  font-family: mont-regular;
+  width: 50%;
+  margin-bottom: 52px;
+}
+.pricing-section .join-now-section .join-now-base .join-now-title .join-now-btn a {
+  background-color: white;
+  color: var(--purple);
+  padding: 15px 31px;
+  border-radius: 32px;
+  border: 1px solid transparent;
+  transition: all 0.6s;
+}
+.pricing-section .join-now-section .join-now-base .join-now-title .join-now-btn a:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.footer-section {
+  background-color: var(--footerBackground);
+  padding-top: 260px;
+  padding-left: 15%;
+  padding-bottom: 32px;
+  padding-right: 15%;
+}
+.footer-section .footer-base .footer-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer-section .footer-base .footer-wrapper .footer-logo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-section .footer-base .footer-wrapper .footer-logo p.desc {
+  font-family: mont-regular;
+  color: var(--lightGray);
+}
+.footer-section .footer-base .footer-wrapper .footer-product h4 {
+  font-size: 18px;
+  color: var(--light);
+  font-family: mont-regular;
+  margin-bottom: 18px;
+}
+.footer-section .footer-base .footer-wrapper .footer-product ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-section .footer-base .footer-wrapper .footer-product ul li a {
+  font-family: mont-regular;
+  color: var(--lightGray);
+  transition: all 0.6s;
+}
+.footer-section .footer-base .footer-wrapper .footer-product ul li a:hover {
+  color: var(--light);
+}
+.footer-section .footer-base .footer-wrapper .footer-help h4 {
+  font-size: 18px;
+  color: var(--light);
+  font-family: mont-regular;
+  margin-bottom: 18px;
+}
+.footer-section .footer-base .footer-wrapper .footer-help ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-section .footer-base .footer-wrapper .footer-help ul li a {
+  font-family: mont-regular;
+  color: var(--lightGray);
+  transition: all 0.6s;
+}
+.footer-section .footer-base .footer-wrapper .footer-help ul li a:hover {
+  color: var(--light);
+}
+.footer-section .footer-base .footer-wrapper .footer-social h4 {
+  font-size: 18px;
+  color: var(--light);
+  font-family: mont-regular;
+  margin-bottom: 18px;
+}
+.footer-section .footer-base .footer-wrapper .footer-social ul {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.footer-section .footer-base .footer-wrapper .footer-social ul li ion-icon {
+  color: var(--lightGray);
+  padding: 12px;
+  border: 1.5px solid var(--lightGray);
+  border-radius: 12px;
+  transition: all 0.6s;
+}
+.footer-section .footer-base .footer-wrapper .footer-social ul li ion-icon:hover {
+  color: white;
+  transform: scale(1.03);
+}
+.footer-section .footer-base .footer-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 96px;
+}
+.footer-section .footer-base .footer-copyright p {
+  text-align: center;
+  color: var(--lightGray);
+  font-family: mont-regular;
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-section .hero-container {
+    width: 70%;
+  }
+  .hero-section .hero-dashboard img {
+    width: 70%;
+  }
+  .pricing-section .join-now-section {
+    width: 80%;
+  }
+  .pricing-section .pricing-base {
+    flex-direction: column;
+  }
+  .pricing-section .pricing-base .pricing-title {
+    width: 90%;
+    text-align: center;
+  }
+  .pricing-section .pricing-base .pricing-title .pricing-title-btn {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .pricing-section .pricing-base .pricing-title p {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .list-features-section .list-features {
+    flex-direction: column;
+  }
+  .list-features-section .list-features .list-features-text h3 {
+    text-align: center;
+    font-size: 36px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+  .list-features-section .list-features .list-features-text p.desc {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  .list-features-section .list-features .list-features-text .list-features-list {
+    text-align: center;
+  }
+  .list-features-secondary-section .list-features {
+    flex-direction: column;
+  }
+  .list-features-secondary-section .list-features .list-features-text-secondary h3 {
+    text-align: center;
+    font-size: 36px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+  .list-features-secondary-section .list-features .list-features-text-secondary p.desc {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  .pricing-section .pricing-base .pricing-table {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+  .header-section .header-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 25%;
+    background-color: var(--heroBackground);
+    z-index: 10;
+    transition: all 0.6s;
+  }
+  .header-section .header-menu.active-menu {
+    right: 0;
+  }
+  .header-section .header-menu .navbar {
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .header-section .header-menu .navbar ion-icon.close-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    font-size: 36px;
+    color: var(--light);
+    right: 13%;
+    top: 16px;
+  }
+  .header-section .header-btn {
+    display: none;
+  }
+  .header-section .header-responsive {
+    display: block;
+  }
+  .hero-section .hero-container {
+    width: 80%;
+  }
+  .hero-section .hero-title {
+    padding-top: 100px;
+  }
+  .hero-section .hero-title h1.title {
+    font-size: 28px;
+  }
+  .hero-section .hero-title p.desc {
+    width: 80%;
+    display: none;
+  }
+  .hero-section .hero-title .hero-btn a {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  .hero-section .hero-dashboard {
+    padding-top: 32px;
+  }
+  .hero-section .hero-dashboard img {
+    width: 90%;
+    border-radius: 12px 12px 0px 0px;
+  }
+  .branding-section {
+    display: none;
+  }
+  .branding-section .branding-base .branding-wrapper {
+    display: grid;
+    padding: 32px 0;
+    grid-template-columns: repeat(2, auto);
+    gap: 16px;
+  }
+  .provide-section .provide-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .provide-section .provide-content .provide-title h3 {
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+  .provide-section .provide-content .provide-desc p {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 22px;
+  }
+  .features-section .features-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .features-section .features-wrap .features {
+    text-align: center;
+  }
+  .list-features-secondary-section {
+    margin-bottom: 62px;
+  }
+  .list-features-secondary-section .list-features {
+    flex-direction: column;
+  }
+  .list-features-secondary-section .list-features .list-features-images img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .list-features-secondary-section .list-features .list-features-text-secondary {
+    order: 1;
+  }
+  .list-features-secondary-section .list-features .list-features-text-secondary h3 {
+    font-family: mont-regular;
+    font-size: 28px;
+    line-height: 115%;
+    text-align: center;
+  }
+  .list-features-secondary-section .list-features .list-features-text-secondary p.desc {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .list-features-secondary-section .list-features .list-features-text-secondary .list-features-list {
+    margin-bottom: 36px;
+  }
+  .list-features-secondary-section .list-features .list-features-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .list-features-section {
+    margin-bottom: 96px;
+  }
+  .list-features-section .list-features {
+    flex-direction: column;
+  }
+  .list-features-section .list-features .list-features-images img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .list-features-section .list-features .list-features-text h3 {
+    font-family: mont-regular;
+    font-size: 28px;
+    line-height: 115%;
+    text-align: center;
+  }
+  .list-features-section .list-features .list-features-text p.desc {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .list-features-section .list-features .list-features-text .list-features-list {
+    margin-bottom: 36px;
+  }
+  .list-features-section .list-features .list-features-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .pricing-section {
+    padding-bottom: 72px;
+  }
+  .pricing-section .pricing-base {
+    flex-direction: column;
+  }
+  .pricing-section .pricing-base .pricing-title {
+    margin-bottom: 52px;
+    width: 100%;
+  }
+  .pricing-section .pricing-base .pricing-title .pricing-title-btn a.pricing-monthly {
+    text-align: center;
+  }
+  .pricing-section .pricing-base .pricing-title .pricing-title-btn a.pricing-annual {
+    text-align: center;
+  }
+  .pricing-section .pricing-base .pricing-title h3 {
+    font-size: 36px;
+  }
+  .pricing-section .pricing-base .pricing-table {
+    margin-left: 0;
+  }
+  .pricing-section .pricing-base .pricing-table .pricing-list {
+    flex-direction: column;
+  }
+  .pricing-section .pricing-base .pricing-table .pricing-list .basic-plan {
+    width: 100%;
+    padding: 40px;
+  }
+  .pricing-section .pricing-base .pricing-table .pricing-list .pro-plan {
+    width: 100%;
+    padding: 40px;
+  }
+  .footer-section {
+    padding-top: 32px;
+  }
+  .footer-section .footer-base .footer-wrapper {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .footer-section .footer-base .footer-wrapper .footer-logo {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
